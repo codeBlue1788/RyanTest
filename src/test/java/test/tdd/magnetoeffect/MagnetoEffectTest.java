@@ -1,12 +1,13 @@
 package test.tdd.magnetoeffect;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.example.tdd.magnetoeffect.MagnetoService;
 import org.example.tdd.magnetoeffect.Point;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class MagnetoEffectTest {
+class MagnetoEffectTest {
 
   private MagnetoService magnetoService;
 
@@ -20,7 +21,7 @@ public class MagnetoEffectTest {
 
     Point newPoint = checkNewPoint(new Point(50, 50));
 
-    Assertions.assertEquals(new Point(50, 50), newPoint);
+    assertEquals(new Point(50, 50), newPoint);
   }
 
   @Test
@@ -32,7 +33,7 @@ public class MagnetoEffectTest {
     Point newPoint = checkNewPoint(new Point(50, 50));
 
     // Assert
-    Assertions.assertEquals(new Point(50, 50), newPoint);
+    assertEquals(new Point(50, 50), newPoint);
   }
 
   @Test
@@ -44,7 +45,7 @@ public class MagnetoEffectTest {
     Point newPoint = checkNewPoint(new Point(50, 50));
 
     // Assert
-    Assertions.assertEquals(new Point(48, 53), newPoint);
+    assertEquals(new Point(48, 53), newPoint);
   }
 
 
@@ -57,7 +58,7 @@ public class MagnetoEffectTest {
     Point newPoint = checkNewPoint(new Point(50, 50));
 
     // Assert
-    Assertions.assertEquals(new Point(55, 50), newPoint);
+    assertEquals(new Point(55, 50), newPoint);
   }
 
   @Test
@@ -70,7 +71,7 @@ public class MagnetoEffectTest {
     Point newPoint = checkNewPoint(new Point(50, 50));
 
     // Assert
-    Assertions.assertEquals(new Point(48, 53), newPoint);
+    assertEquals(new Point(48, 53), newPoint);
   }
 
   @Test
@@ -83,7 +84,7 @@ public class MagnetoEffectTest {
     Point newPoint = checkNewPoint(new Point(50, 50));
 
     // Assert
-    Assertions.assertEquals(new Point(51, 51), newPoint);
+    assertEquals(new Point(51, 51), newPoint);
   }
 
   @Test
@@ -96,7 +97,7 @@ public class MagnetoEffectTest {
     Point newPoint = checkNewPoint(new Point(50, 50));
 
     // Assert
-    Assertions.assertEquals(new Point(50, 50), newPoint);
+    assertEquals(new Point(50, 50), newPoint);
   }
 
   @Test
@@ -109,7 +110,7 @@ public class MagnetoEffectTest {
     Point newPoint = checkNewPoint(new Point(50, 50));
 
     // Assert
-    Assertions.assertEquals(new Point(55, 50), newPoint);
+    assertEquals(new Point(55, 50), newPoint);
   }
 
   @Test
@@ -122,7 +123,7 @@ public class MagnetoEffectTest {
     Point newPoint = checkNewPoint(new Point(50, 50));
 
     // Assert
-    Assertions.assertEquals(new Point(54, 53), newPoint);
+    assertEquals(new Point(54, 53), newPoint);
   }
 
   @Test
@@ -135,7 +136,7 @@ public class MagnetoEffectTest {
     Point newPoint = checkNewPoint(new Point(50, 50));
 
     // Assert
-    Assertions.assertEquals(new Point(54, 53), newPoint);
+    assertEquals(new Point(54, 53), newPoint);
   }
 
   private Point checkNewPoint(Point mousePoint) {

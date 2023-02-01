@@ -39,4 +39,13 @@ public class Point {
   public int hashCode() {
     return Objects.hash(x, y);
   }
+
+  public double getDistance(Point mousePoint) {
+    return Math.pow((mousePoint.getX() - getX()), 2) + Math.pow(
+        (mousePoint.getY() - getY()), 2);
+  }
+
+  public boolean isAnchorToMousePointDistanceInRange(Point mousePoint) {
+    return getDistance(mousePoint) <= Math.pow(5, 2);
+  }
 }
