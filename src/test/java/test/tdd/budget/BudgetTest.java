@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 import org.example.tdd.budget.BudgetService;
 import org.example.tdd.budget.model.Budget;
+import org.example.tdd.budget.model.Period;
 import org.example.tdd.budget.repo.IBudgetRepo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -33,7 +34,7 @@ class BudgetTest {
     // Act
     IllegalArgumentException exception = Assertions.assertThrows(
         IllegalArgumentException.class,
-        () -> budgetService.queryBudget(startDate, endDate)
+        () -> budgetService.queryBudget(new Period(startDate, endDate))
     );
 
     // Assert
@@ -47,7 +48,7 @@ class BudgetTest {
     LocalDate endDate = LocalDate.of(2022, 9, 15);
 
     // Act
-    int amount = budgetService.queryBudget(startDate, endDate);
+    int amount = budgetService.queryBudget(new Period(startDate, endDate));
 
     // Assert
     assertEquals(0, amount);
@@ -66,7 +67,7 @@ class BudgetTest {
     ));
 
     // Act
-    int amount = budgetService.queryBudget(startDate, endDate);
+    int amount = budgetService.queryBudget(new Period(startDate, endDate));
 
     // Assert
     assertEquals(200, amount);
@@ -85,7 +86,7 @@ class BudgetTest {
     ));
 
     // Act
-    int amount = budgetService.queryBudget(startDate, endDate);
+    int amount = budgetService.queryBudget(new Period(startDate, endDate));
 
     // Assert
     assertEquals(3100, amount);
@@ -104,7 +105,7 @@ class BudgetTest {
     ));
 
     // Act
-    int amount = budgetService.queryBudget(startDate, endDate);
+    int amount = budgetService.queryBudget(new Period(startDate, endDate));
 
     // Assert
     assertEquals(6700, amount);
@@ -122,7 +123,7 @@ class BudgetTest {
     ));
 
     // Act
-    int amount = budgetService.queryBudget(startDate, endDate);
+    int amount = budgetService.queryBudget(new Period(startDate, endDate));
 
     // Assert
     assertEquals(3600, amount);
@@ -141,7 +142,7 @@ class BudgetTest {
     ));
 
     // Act
-    int amount = budgetService.queryBudget(startDate, endDate);
+    int amount = budgetService.queryBudget(new Period(startDate, endDate));
 
     // Assert
     assertEquals(300, amount);

@@ -25,5 +25,3 @@ o
 ?src/main/java/org/example/tdd/magnetoeffect/MagnetoService.java,e\1\e1ece1ea4e366b44dc31764b2273f2360d28c734
 g
 7src/test/java/test/tdd/scholarship/ScholarshipTest.java,f\a\fa142306baef45c6ed2d9367d0f3659840f34452
-f
-6src/main/java/org/example/tdd/budget/model/Budget.java,1\e\1e3f12937af0f92771791546a042b8253cea8f5c
