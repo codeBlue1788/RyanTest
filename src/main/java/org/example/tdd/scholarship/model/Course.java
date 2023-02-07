@@ -11,11 +11,4 @@ public class Course {
 
   // 分數
   private double score;
-
-  // 學分
-  private int credit;
-
-  public Course(double score) {
-    this.score = score;
-  }
 }
