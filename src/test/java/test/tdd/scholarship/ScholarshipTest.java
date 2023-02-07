@@ -24,7 +24,7 @@ public class ScholarshipTest {
     // Arrange
     Transcript transcript = givenTranscript(new ArrayList<>(), Transcript.BACHELOR);
     // Act
-    int amount = service.calculate(transcript);
+    int amount = calculate(transcript);
 
     // Assert
     Assertions.assertEquals(0, amount);
@@ -44,10 +44,14 @@ public class ScholarshipTest {
         new Course(70)
     ), Transcript.BACHELOR);
     // Act
-    int amount = service.calculate(transcript);
+    int amount = calculate(transcript);
 
     // Assert
     Assertions.assertEquals(10000, amount);
+  }
+
+  private int calculate(Transcript transcript) {
+    return service.calculate(transcript);
   }
 
   @Test
@@ -62,7 +66,7 @@ public class ScholarshipTest {
         new Course(70)
     ), Transcript.BACHELOR);
     // Act
-    int amount = service.calculate(transcript);
+    int amount = calculate(transcript);
 
     // Assert
     Assertions.assertEquals(5000, amount);
@@ -72,11 +76,11 @@ public class ScholarshipTest {
   void test_master_get_full_scholarship() {
     // Arrange
     Transcript transcript = givenTranscript(Arrays.asList(
-        new Course(85,2),
-        new Course(100,1)
+        new Course(85, 2),
+        new Course(100, 1)
     ), Transcript.MASTER);
     // Act
-    int amount = service.calculate(transcript);
+    int amount = calculate(transcript);
 
     // Assert
     Assertions.assertEquals(15000, amount);
@@ -86,11 +90,11 @@ public class ScholarshipTest {
   void test_master_get_half_scholarship() {
     // Arrange
     Transcript transcript = givenTranscript(Arrays.asList(
-        new Course(70,2),
-        new Course(100,1)
+        new Course(70, 2),
+        new Course(100, 1)
     ), Transcript.MASTER);
     // Act
-    int amount = service.calculate(transcript);
+    int amount = calculate(transcript);
 
     // Assert
     Assertions.assertEquals(7500, amount);
@@ -105,7 +109,7 @@ public class ScholarshipTest {
         new Course(91)
     ), Transcript.PHD);
     // Act
-    int amount = service.calculate(transcript);
+    int amount = calculate(transcript);
 
     // Assert
     Assertions.assertEquals(40000, amount);
@@ -120,7 +124,7 @@ public class ScholarshipTest {
         new Course(91)
     ), Transcript.PHD);
     // Act
-    int amount = service.calculate(transcript);
+    int amount = calculate(transcript);
 
     // Assert
     Assertions.assertEquals(20000, amount);
@@ -137,10 +141,10 @@ public class ScholarshipTest {
 
     // Act
     IllegalArgumentException exception = Assertions.assertThrows(
-        IllegalArgumentException.class, () -> service.calculate(transcript));
+        IllegalArgumentException.class, () -> calculate(transcript));
 
     // Assert
-    Assertions.assertEquals("Wrong Type!",exception.getMessage());
+    Assertions.assertEquals("Wrong Type!", exception.getMessage());
   }
 
 }

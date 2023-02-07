@@ -15,13 +15,11 @@ public class BachelorCalculator implements ICalculator {
     }
 
     // 學士
-    double overEightyPercent = transcript.calculateCoursePercent(courses);
-
-    if (overEightyPercent >= 0.5) {
+    if (transcript.isMoreThanPercent(courses, 0.5)) {
       return 10000;
     }
 
-    if (overEightyPercent >= 0.3) {
+    if (transcript.isMoreThanPercent(courses, 0.3)) {
       return 5000;
     }
 

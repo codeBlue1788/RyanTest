@@ -11,20 +11,8 @@ h
 8src/main/java/org/example/pattern/template/Beverage.java,2\1\2174acf3ebbf8d7e67c645c214c616781ca5a2f5
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-q
-Asrc/main/java/org/example/tdd/scholarship/BachelorCalculator.java,4\e\4ec49b4488161617e0a669cea5e98d1e8f4c6cf1
 k
 ;src/main/java/org/example/tdd/scholarship/model/Course.java,a\9\a96ebd34b3cd725103467826915329b1d1403ab8
-o
-?src/main/java/org/example/tdd/scholarship/MasterCalculator.java,1\4\14e0940487e76130cc63089b32e4badab83d2196
-l
-<src/main/java/org/example/tdd/scholarship/PhDCalculator.java,6\d\6dcd98ddf9f4ac43f435159db4ed57f83ac107cb
-g
-7src/test/java/test/tdd/scholarship/ScholarshipTest.java,f\a\fa142306baef45c6ed2d9367d0f3659840f34452
-q
-Asrc/main/java/org/example/tdd/scholarship/ScholarshipService.java,f\3\f3b9143e8c8eef0d3af227ae982f06fa4740ab15
-o
-?src/main/java/org/example/tdd/scholarship/model/Transcript.java,c\4\c4310d5da61271ca5836c679cdbf022d0d73bb26
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302

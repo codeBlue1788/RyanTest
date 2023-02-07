@@ -13,14 +13,14 @@ public class MagnetoService {
   // After Refactor 8行
   public Point check(Point mousePoint) {
     if (anchorsExist()) {
-      List<Point> anchorInRangeAndSorted = setAnchorToMousePointDistanceAndSorted(mousePoint);
-      return findNearestAnchor(mousePoint, anchorInRangeAndSorted,
-          existSameNearestDistance(anchorInRangeAndSorted));
+      List<Point> anchorsInRange = setAnchorToMousePointDistance(mousePoint);
+      return findNearestAnchor(mousePoint, anchorsInRange,
+          existSameNearestDistance(anchorsInRange));
     }
     return mousePoint;
   }
 
-  private List<Point> setAnchorToMousePointDistanceAndSorted(Point mousePoint) {
+  private List<Point> setAnchorToMousePointDistance(Point mousePoint) {
     List<Point> anchorInRange = this.anchors.stream()
         .filter(anchor -> anchor.isAnchorToMousePointDistanceInRange(mousePoint)).toList();
     anchorInRange

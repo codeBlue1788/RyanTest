@@ -26,11 +26,10 @@ public class Transcript {
 
   public double calculateAvgScore(List<Course> courses) {
     double scoreReduce = courses.stream().map(course -> course.getCredit() * course.getScore())
-        .reduce(0D, (a, b) -> a + b);
+        .reduce(0D, Double::sum);
     double creditReduce = courses.stream().map(Course::getCredit)
-        .reduce(0, (a, b) -> a + b);
-    double avgScore = scoreReduce / creditReduce;
-    return avgScore;
+        .reduce(0, Integer::sum);
+    return scoreReduce / creditReduce;
   }
 
 
@@ -45,5 +44,13 @@ public class Transcript {
 
   public  boolean hasNoCourse(List<Course> courses) {
     return CollectionUtils.isEmpty(courses);
+  }
+
+  public boolean isMoreThanPercent(List<Course> courses, double percent) {
+    return calculateCoursePercent(courses) >= percent;
+  }
+
+  public boolean isMoreThanAvgScore(List<Course> courses, int avgScore) {
+    return calculateAvgScore(courses) >= avgScore;
   }
 }

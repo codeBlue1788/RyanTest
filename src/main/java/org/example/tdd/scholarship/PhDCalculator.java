@@ -15,11 +15,10 @@ public class PhDCalculator implements ICalculator {
     }
 
     // 博士
-    boolean isAllOverNinety = transcript.isAllOverGivenScore(courses, 90);
-    boolean isAllOverEighty = transcript.isAllOverGivenScore(courses, 80);
-    if (isAllOverNinety) {
+    if (transcript.isAllOverGivenScore(courses, 90)) {
       return 40000;
-    } else if (isAllOverEighty) {
+    }
+    if (transcript.isAllOverGivenScore(courses, 80)) {
       return 20000;
     }
 

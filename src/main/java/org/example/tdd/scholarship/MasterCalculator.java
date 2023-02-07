@@ -15,13 +15,11 @@ public class MasterCalculator implements ICalculator {
     }
 
     // 碩士
-    double avgScore = transcript.calculateAvgScore(courses);
-
-    if (avgScore >= 90) {
+    if (transcript.isMoreThanAvgScore(courses, 90)) {
       return 15000;
     }
 
-    if (avgScore >= 80) {
+    if (transcript.isMoreThanAvgScore(courses, 80)) {
       return 7500;
     }
 
